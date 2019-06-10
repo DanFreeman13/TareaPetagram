@@ -8,6 +8,7 @@
     android:elevation="@dimen/elevacion_actionbar"
     android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:titleTextColor="@color/colorBlanco"
     >
 
     <ImageView
@@ -16,7 +17,7 @@
         android:src="@drawable/dog_paw_filled_50"/>
 
     <TextView
-        android:layout_width="@dimen/anchoTitulo"
+        android:layout_width="@dimen/anchoTituloNoStar"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textColor="@color/colorBlanco"

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".Favoritas">
 
-    <include android:id="@+id/miActionBar"
+    <include android:id="@+id/miActionBar_noStar"
         layout="@layout/actionbar_nostar"
         ></include>
 

@@ -4,6 +4,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="elevacion_actionbar">4dp</dimen>
     <dimen name="anchoTitulo">250dp</dimen>
+    <dimen name="anchoTituloNoStar">220dp</dimen>
     <dimen name="textSize">20dp</dimen>
     <dimen name="huellita">40dp</dimen>
     <dimen name="estrellita">50dp</dimen>
