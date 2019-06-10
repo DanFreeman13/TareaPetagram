@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,12 +27,21 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MascotaViewHolder mascotaViewHolder, int position) {
+    public void onBindViewHolder(@NonNull final MascotaViewHolder mascotaViewHolder, int position) {
 
         final Mascota mascota = mascotas.get(position);
         mascotaViewHolder.imgFoto.setImageResource(mascota.getFoto());
         mascotaViewHolder.tvNombreCV.setText(mascota.getNombre());
         mascotaViewHolder.tvLikesCV.setText(String.valueOf(mascota.getLikes()));
+
+        mascotaViewHolder.imgHuesoBlanco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mascota.setLikes(1 + Integer.valueOf((String) mascotaViewHolder.tvLikesCV.getText()));
+                mascotaViewHolder.tvLikesCV.setText(String.valueOf(mascota.getLikes()));
+
+            }
+        });
     }
 
     @Override
@@ -43,13 +53,15 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         private ImageView imgFoto;
         private TextView tvNombreCV;
         private TextView tvLikesCV;
+        private ImageButton imgHuesoBlanco;
 
         public MascotaViewHolder(@NonNull View itemView){
             super(itemView);
 
-            imgFoto      = (ImageView) itemView.findViewById(R.id.imgFoto);
-            tvNombreCV   = (TextView) itemView.findViewById(R.id.tvMascotaCV);
-            tvLikesCV    = (TextView) itemView.findViewById(R.id.tvLikesCV);
+            imgFoto        = (ImageView) itemView.findViewById(R.id.imgFoto);
+            tvNombreCV     = (TextView) itemView.findViewById(R.id.tvMascotaCV);
+            tvLikesCV      = (TextView) itemView.findViewById(R.id.tvLikesCV);
+            imgHuesoBlanco = (ImageButton) itemView.findViewById(R.id.imgHuesoBlanco);
         }
     }
 }
