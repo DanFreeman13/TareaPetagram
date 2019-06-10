@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="elevacion_actionbar">4dp</dimen>
+    <dimen name="anchoTitulo">250dp</dimen>
+    <dimen name="textSize">20dp</dimen>
+    <dimen name="huellita">40dp</dimen>
+    <dimen name="estrellita">50dp</dimen>
+    <dimen name="corner_radius_cardview">5dp</dimen>
+    <dimen name="imagenperro">350dp</dimen>
+    <dimen name="espacio_mascota">10dp</dimen>
+</resources>
