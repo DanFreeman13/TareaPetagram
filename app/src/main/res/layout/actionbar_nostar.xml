@@ -23,18 +23,12 @@
         android:textSize="@dimen/textSize"
         android:textStyle="bold"
         android:textAlignment="center"/>
-    <ImageButton
-        android:layout_width="@dimen/estrellita"
-        android:layout_height="@dimen/estrellita"
-        android:src="@drawable/star_filled_50"
-        android:background="@color/transparente"
-        android:onClick="irAFavoritas"
-        />
 
     <ImageView
         android:layout_width="@dimen/huellita"
         android:layout_height="@dimen/huellita"
         android:src="@drawable/menu_vertical_48"
+        android:layout_marginLeft="@dimen/estrellita"
         />
 
 

@@ -1,10 +1,12 @@
 package com.danielfreeman.tareapetagram;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
@@ -31,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         inicializarListaMascotas();
         inicializarAdaptador();
 
-
     }
 
     public void inicializarAdaptador(){
@@ -54,5 +55,10 @@ public class MainActivity extends AppCompatActivity {
         mascotas.add(new Mascota(R.drawable.perro10, "Toto", 0));
 
 
+    }
+
+    public void irAFavoritas(View v){
+        Intent intent = new Intent(this, Favoritas.class);
+        startActivity(intent);
     }
 }
