@@ -1,5 +1,6 @@
 package com.danielfreeman.tareapetagram;
 
+import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,16 +9,19 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotaViewHolder> {
 
-    public MascotaAdaptador(ArrayList<Mascota> mascotas){
+    public MascotaAdaptador(ArrayList<Mascota> mascotas, Activity activity){
         this.mascotas = mascotas;
+        this.activity = activity;
     }
 
     ArrayList<Mascota> mascotas;
+    Activity activity;
 
     @NonNull
     @Override
@@ -39,6 +43,8 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
             public void onClick(View v) {
                 mascota.setLikes(1 + Integer.valueOf((String) mascotaViewHolder.tvLikesCV.getText()));
                 mascotaViewHolder.tvLikesCV.setText(String.valueOf(mascota.getLikes()));
+
+                Toast.makeText(activity, mascota.getNombre() + " tiene un nuevo Like!", Toast.LENGTH_LONG).show();
 
             }
         });
