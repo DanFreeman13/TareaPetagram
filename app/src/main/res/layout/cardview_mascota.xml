@@ -35,7 +35,8 @@
                 android:layout_width="@dimen/huellita"
                 android:layout_height="@dimen/huellita"
                 android:src="@drawable/dog_bone_64"
-                android:layout_gravity="center_vertical" />
+                android:layout_gravity="center_vertical"
+                android:background="@color/transparente"/>
 
             <TextView
                 android:id="@+id/tvMascotaCV"

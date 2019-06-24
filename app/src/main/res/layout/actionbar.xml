@@ -24,12 +24,12 @@
         android:textStyle="bold"
         android:textAlignment="center"/>
     <ImageButton
+        android:id="@+id/ivEstrella"
         android:layout_width="@dimen/estrellita"
         android:layout_height="@dimen/estrellita"
         android:src="@drawable/star_filled_50"
         android:background="@color/transparente"
         android:scaleType="centerInside"
-        android:onClick="irAFavoritas"
         />
 
     <ImageView
